@@ -1,52 +1,76 @@
-# Prerequisites
-*.d
+#include<stdio.h>
+#include <time.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+int main(){
+system("clear");
 
-# Linker output
-*.ilk
-*.map
-*.exp
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+while (1)
+{
+  per1();
+  sleep(1);
+  per2();
+  sleep(1);
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+}
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+  return 0;
+}
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+
+int per1(){
+system("clear");
+//srand(time(NULL));
+
+for (int i = 1; i < 6; i++)
+{
+  for (int j = 1; j <= 7; j++)
+  {
+    if ((i+j)==9 || j==i-1 ||  (i==1 && (j==2 || j==6)) || (i==2 && j==4))
+    {
+      printf("*");
+    }
+    else
+    {
+      printf(" ");
+    }
+    
+  }
+    printf("\n");
+  
+}
+
+
+  return 0;
+}
+
+
+
+
+int per2(){
+system("clear");
+//srand(time(NULL));
+
+for (int i = 1; i <= 4; i++)
+{
+  for (int j = 1; j <= 5; j++)
+  {
+    if ((i+j)==7 || j==i-1 || (i==1 && (j==2 || j==4)) || i==2 && j==3)
+    {
+      printf("*");
+    }
+    else
+    {
+      printf(" ");
+    }
+    
+  }
+    printf("\n");
+  
+}
+
+
+  return 0;
+}
